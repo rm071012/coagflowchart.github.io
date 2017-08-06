@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang=en >
+	
+
+
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	<title>CoagCheck</title>
+	<style>
+		body {
+			background-color : #1ab2ff;
+		}
+		#main-buttons-group {
+			background-color : #ffaa00;
+			}
+		#refresh-back-group {
+			background-color : #ffdd99;
+			}
+	</style>
+	<script>
+		function myFunction1() {
+		var x = document.getElementById('button1-text');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		
+		function myFunction2() {
+		var x = document.getElementById('button2-text');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		
+		
+		
+		function myFunctionRefresh() {
+		var x = document.getElementsByTagName('p');
+			for ( var i = 0; i < x.length; i +=1){
+				
+				if (x[i].style.display === 'none') {
+					x[i].style.display = 'block';
+				} 			
+				else {
+					x[i].style.display = 'none';
+				}
+			}
+		}
+	</script>
+		
+</head>
+
+<body>
+	<div class="container">
+		
+		
+		<h1>Warfarin</h1>
+		<div class="col-md-6" id="master-division">
+			<div class= "well" id = "main-buttons-group">
+				<ul class= "list-group">
+					<div class="button-section-1" style ="margin : 0 0 3px 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-danger  btn-block" onclick="myFunction1()">Minor Surgery</button></a>
+						<p id="button1-text" style = "display:none">lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum </p></li> 
+						
+					</div>
+					
+					<div class="button-section-2"style ="margin : 0 0 0 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-warning  btn-block"onclick="myFunction2()" >Major Surgery</button></a>
+						<p id="button2-text" style = "display:none">lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum </p></li> 
+					</div>
+					
+				</ul>	
+				
+			</div>
+			
+			<div class= "well" id = "refresh-back-group">
+				<div class = "row">
+					<a href="#"><button type = "button" class = "btn btn-primary" onclick="myFunctionRefresh()">Refresh</button></a>
+					<a href="#"><button type = "button" class = "btn btn-info">Home</button></a>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+
+ 
+</body>
+
+
+
+
+</html>
