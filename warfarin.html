@@ -44,10 +44,63 @@
 				}
 		}
 		
-		
-		
+		function myFunctionIndications(){
+		var x = document.getElementById('indications-for-warfarin');
+			if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+			
+		function myFunction3() {
+		var x = document.getElementById('button3-list');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		function myFunction4() {
+		var x = document.getElementById('button4-list');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		function myFunction5() {
+		var x = document.getElementById('button5-list');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		function myFunction6() {
+		var x = document.getElementById('button6-list');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		function myFunction2() {
+		var x = document.getElementById('button2-text');
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
 		function myFunctionRefresh() {
-		var x = document.getElementsByTagName('p');
+		var x = document.getElementsByClassName('collapsible-element');
 			for ( var i = 0; i < x.length; i +=1){
 				
 				if (x[i].style.display === 'none') {
@@ -58,6 +111,24 @@
 				}
 			}
 		}
+		function myFunctionHigh(){
+		var x = document.getElementById('high-risk');
+			if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
+		function myFunctionVHigh(){
+		var x = document.getElementById('very-high-risk');
+			if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} 			
+				else {
+					x.style.display = 'none';
+				}
+		}
 	</script>
 		
 </head>
@@ -67,30 +138,86 @@
 		
 		
 		<h1>Warfarin</h1>
-		<div class="col-md-6" id="master-division">
-			<div class= "well" id = "main-buttons-group">
+		<div class="col-md-12" id="master-division">
+			<div class= "well col-md-8" id = "main-buttons-group">
 				<ul class= "list-group">
 					<div class="button-section-1" style ="margin : 0 0 3px 0;">
 						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-danger  btn-block" onclick="myFunction1()">Minor Surgery</button></a>
-						<p id="button1-text" style = "display:none">lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum </p></li> 
+						<p  class= "collapsible-element" id="button1-text" style = "display:none">Continue Warfarin and adjust dose to achieve INR target of 2.0 (unless regional anaesthesia is considered where a target of 1.5 may be appropriate)</p></li> 
 						
 					</div>
 					
 					<div class="button-section-2"style ="margin : 0 0 0 0;">
-						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-warning  btn-block"onclick="myFunction2()" >Major Surgery</button></a>
-						<p id="button2-text" style = "display:none">lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum lorem ipsum dimsum </p></li> 
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-warning  btn-block"onclick="myFunctionIndications()" >Major Surgery</button></a>
+						<p  class= "collapsible-element" id="button2-text" style = "display:none"></p></li> 
 					</div>
+					
 					
 				</ul>	
 				
 			</div>
-			
-			<div class= "well" id = "refresh-back-group">
+			<div class= "well col-md-8" id = "refresh-back-group">
 				<div class = "row">
 					<a href="#"><button type = "button" class = "btn btn-primary" onclick="myFunctionRefresh()">Refresh</button></a>
 					<a href="#"><button type = "button" class = "btn btn-info">Home</button></a>
 				</div>
 			</div>
+			
+			<div class="well col-md-10" id ="indications-for-warfarin" style = "display:none">
+				<h4>Indication for starting Warfarin</h4>
+				<ul class= "list-group">
+					<div class="button-section-3" style ="margin : 0 0 3px 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-success  btn-block" onclick="myFunction3()">Venous Thrombo-Embolism</button></a>
+							<ul class="collapsible-element list-group" id="button3-list" style = "display:none">
+								<li class= "list-group-item">VTE within 3 months</li>
+								<li class="list-group-item">Very high risk patients with a previous VTE whilst on therapeutic anticoag who now have a target INR of 3.5</li>
+								<li class="list-group-item"><button type = "button" class = "btn btn-danger" onclick="myFunctionHigh()" >High Risk</button></li>
+							</ul>
+						</li> 
+						
+					</div>
+					<div class="button-section-4" style ="margin : 0 0 3px 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-warning  btn-block" onclick="myFunction4()">Atrial Fibrillation</button></a>
+							<ul class="collapsible-element list-group" id="button4-list" style = "display:none">
+								<li class= "list-group-item">Previous stroke/TIA in last 3 months</li>
+								<li class="list-group-item">Previous stroke/TIA and three or more of the risk factors - CCF , HYPERTENSION, AGE>75, DIABETES</li>
+								<li class="list-group-item"><button type = "button" class = "btn btn-danger" onclick="myFunctionHigh()" >High Risk</button></li>
+							</ul>
+						</li> 
+					</div>
+					<div class="button-section-5" style ="margin : 0 0 3px 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-danger  btn-block" onclick="myFunction5()">Mechanical Heart Valves</button></a>
+							<ul class="collapsible-element list-group" id="button5-list" style = "display:none">
+									<li class= "list-group-item">Patients other than those with Bileaflet aortic valve</li>
+									<li class="list-group-item">And no other risks</li>
+									<li class="list-group-item"><button type = "button" class = "btn btn-danger" onclick="myFunctionVHigh()" >High Risk</button></li>
+							</ul>
+						</li> 
+					</div>
+					
+					<div class="button-section-6"style ="margin : 0 0 0 0;">
+						<li class = "list-group-item" <a href="#"><button type = "button" class = "btn btn-warning  btn-block"onclick="myFunction6()" >Others </button></a>
+							<ul class="collapsible-element list-group" id="button6-list" style = "display:none">
+									<li class= "list-group-item">Low Risk </li>
+									<li class="list-group-item">Stop Warfarin 5 days before operation. Surgery can commence if INR is equal or less than 1.5 checked on the day of surgery</li>
+									<li class="list-group-item"><button type = "button" class = "btn btn-info"  >Low Risk</button></li>
+								</ul>
+						</li>
+					</div>
+				</ul>
+			</div>
+			
+			
+			<div class="well col-md-10" id ="high-risk" style = "display:none">
+				<p>Regime 1</p>
+				
+			
+			</div>
+			
+			<div class="well col-md-10" id ="very-high-risk" style = "display:none">
+				<p>Regime 2</p>
+			</div>
+			
 		</div>
 		
 		
@@ -98,6 +225,7 @@
 
  
 </body>
+
 
 
 
